@@ -71,7 +71,7 @@ class BaseModel:
             del new_dict["_sa_instance_state"]
         if getenv("HBNB_TYPE_STORAGE") == "db":
             if "password" in new_dict:
-                del new_dict["password"]
+                del new_dict["_password"]
         return new_dict
 
     def delete(self):
