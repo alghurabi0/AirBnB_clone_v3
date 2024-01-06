@@ -25,12 +25,10 @@ class User(BaseModel, Base):
         first_name = ""
         last_name = ""
 
-
     @property
     def password(self):
         """getter for password"""
         return self._password
-
 
     @password.setter
     def password(self, value):
@@ -39,7 +37,6 @@ class User(BaseModel, Base):
             self._password = hashlib.md5(value.encode()).hexdigest()
         else:
             self._password = None
-
 
     def __init__(self, *args, **kwargs):
         """initializes user"""
