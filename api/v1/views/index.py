@@ -11,13 +11,13 @@ from models.city import City
 from models.review import Review
 
 
-@app_views.route('/status', strict_slashes=False)
+@app_views.route('/status', methods=['GET'])
 def status():
     """Returns status"""
-    return jsonify({"status": "OK"})
+    return jsonify({'status': 'OK'})
 
 
-@app_views.route('/stats', strict_slashes=False)
+@app_views.route('/stats', methods=['GET'])
 def stats():
     """Returns stats"""
     return jsonify({"amenities": storage.count(Amenity),
