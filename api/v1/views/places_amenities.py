@@ -8,7 +8,7 @@ from models.place import Place
 
 
 @app_views.route('/places/<place_id>/amenities', methods=['GET'])
-def get_amenities(place_id):
+def get_amenitiesss(place_id):
     """Get all amenities of a place"""
     place = storage.get(Place, place_id)
     if place is None:
